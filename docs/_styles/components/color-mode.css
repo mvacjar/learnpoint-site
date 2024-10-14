@@ -17,11 +17,14 @@
    Light Mode
    ========================================================================== */
 
+body {
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
 .footer__select-color-mode-panel {
   display: flex;
   flex-direction: row;
   color: var(--c-light);
-  transition: background-color 0.5s ease, color 0.5s ease;
 }
 
 .footer__select-light-mode-button {
