@@ -1,12 +1,13 @@
 document.addEventListener('DOMContentLoaded', () => {
-  document.addEventListener('click', (event) => {
-    if (event.target.matches('.footer__select-light-mode-button')) {
-      applyColorMode('light-mode');
-    } else if (event.target.matches('.footer__select-dark-mode-button')) {
-      applyColorMode('dark-mode');
-    }
-  });
   detectPreferredColorScheme();
+});
+
+document.addEventListener('click', (event) => {
+  if (event.target.matches('.footer__select-light-mode-button')) {
+    applyColorMode('light-mode');
+  } else if (event.target.matches('.footer__select-dark-mode-button')) {
+    applyColorMode('dark-mode');
+  }
 });
 
 function detectPreferredColorScheme() {
