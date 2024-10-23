@@ -6,6 +6,16 @@
   overflow: hidden;
 }
 
+.is-lightmode .header {
+  background-color: #fefcf6;
+  color: #000;
+}
+
+.is-darkmode .header {
+  background-color: #262528;
+  color: #e0e0e0;
+}
+
 .print .header {
   display: none;
 }

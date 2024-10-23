@@ -3,36 +3,40 @@
    ========================================================================== */
 
 @page {
-    margin: 32px;
+  margin: 32px;
 }
-
-
 
 /* ==========================================================================
    Force Background Image Display
    ========================================================================== */
 
 .print * {
-    -webkit-print-color-adjust: exact;
-    print-color-adjust: exact;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
 }
-
-
 
 /* ==========================================================================
    Tool: Hide
    ========================================================================== */
 
 .print .print__hide {
-    display: none !important;
+  display: none !important;
 }
 
+.is-lightmode .print__hide {
+  background-color: #fefcf6;
+  color: #000;
+}
 
+.is-darkmode .print__hide {
+  background-color: #262528;
+  color: #e0e0e0;
+}
 
 /* ==========================================================================
    Tool: Avoid Break Inside
    ========================================================================== */
 
 .print .print__avoid-break-inside {
-    break-inside: avoid-page;
+  break-inside: avoid-page;
 }

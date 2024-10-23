@@ -7,7 +7,7 @@ document.addEventListener('click', (event) => {
   if (event.target.matches('.footer__select-light-mode-button')) {
     applyColorMode('is-lightmode');
   } else if (event.target.matches('.footer__select-dark-mode-button')) {
-    applyColorMode('is-darkmade');
+    applyColorMode('is-darkmode');
   }
 });
 
@@ -28,7 +28,7 @@ function detectPreferredColorScheme() {
     window.matchMedia &&
     window.matchMedia('(prefers-color-scheme: dark)').matches
   ) {
-    applyColorMode('is-darkmade');
+    applyColorMode('is-darkmode');
   } else {
     applyColorMode('is-lightmode');
   }
@@ -64,7 +64,7 @@ function updateLogo() {
       img.style.display = 'none';
     });
 
-  if (mode === 'is-darkmade') {
+  if (mode === 'is-darkmode') {
     if (isMobile) {
       document.querySelector('.dark-mobile-mode-logo').style.display = 'block';
     } else {

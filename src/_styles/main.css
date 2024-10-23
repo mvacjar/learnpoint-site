@@ -19,11 +19,50 @@ body {
   font-size: 16px;
 }
 
+html,
+body,
+.header,
+.main__container,
+.footer,
+.print__hide {
+  transition: background-color 0.5s ease, color 0.2s ease;
+}
+
+html.is-lightmode {
+  background-color: #fefcf6;
+  color: #000;
+}
+
+html.is-darkmode {
+  background-color: #262528;
+  color: #e0e0e0;
+}
+
+.is-lightmode body {
+  background-color: #fefcf6;
+  color: #000;
+}
+
+.is-darkmode body {
+  background-color: #262528;
+  color: #e0e0e0;
+}
+
 .main__container {
   max-width: 1200px;
   max-width: 960px;
   margin: 0 auto;
   padding: 0 16px;
+}
+
+.is-lightmode .main__container {
+  background-color: #fefcf6;
+  color: #000;
+}
+
+.is-darkmode .main__container {
+  background-color: #262528;
+  color: #e0e0e0;
 }
 
 h1 {
