@@ -55,12 +55,31 @@
 
 .header__logo-desktop-img,
 .header__logo-mobile-img {
-  display: block;
+  display: none;
 }
 
-.is-desktop .header__logo-mobile-img,
-.is-mobile .header__logo-desktop-img {
-  display: none;
+@media (min-width: 769px) {
+  .header__logo-desktop-img.light-desktop-mode-logo,
+  .header__logo-desktop-img.dark-desktop-mode-logo {
+    display: none;
+  }
+
+  .is-lightmode .header__logo-desktop-img.light-desktop-mode-logo,
+  .is-darkmode .header__logo-desktop-img.dark-desktop-mode-logo {
+    display: block;
+  }
+}
+
+@media (max-width: 768px) {
+  .header__logo-mobile-img.light-mobile-mode-logo,
+  .header__logo-mobile-img.dark-mobile-mode-logo {
+    display: none;
+  }
+
+  .is-lightmode .header__logo-mobile-img.light-mobile-mode-logo,
+  .is-darkmode .header__logo-mobile-img.dark-mobile-mode-logo {
+    display: block;
+  }
 }
 
 /* ==========================================================================
