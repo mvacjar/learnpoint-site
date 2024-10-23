@@ -1,68 +1,71 @@
 html {
-    scrollbar-width: thin;
+  scrollbar-width: thin;
 }
 
 body {
-    margin: 0;
-    font-family: 'Open Sans', 'Segoe UI', sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
-    color: #0f1016;
-    line-height: 1.5;
-    font-size: 18px;
-    overflow-y: scroll;
-    background-color: #fffcf6;
+  margin: 0;
+  font-family: 'Open Sans', 'Segoe UI', sans-serif, 'Apple Color Emoji',
+    'Segoe UI Emoji';
+  color: #0f1016;
+  line-height: 1.5;
+  font-size: 18px;
+  overflow-y: scroll;
+  background-color: #fffcf6;
 }
 
 .print body {
-    overflow-y: auto;
-    background-color: #fff;
-    font-size: 16px;
+  overflow-y: auto;
+  background-color: #fff;
+  font-size: 16px;
 }
 
 .main__container {
-    max-width: 1200px;
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 0 16px;
+  max-width: 1200px;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 16px;
 }
 
 h1 {
-    font-family: 'Raleway', 'Segoe UI', sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
-    font-weight: 800;
-    font-weight: 900;
-    text-align: center;
-    font-size: 64px;
-    font-size: 58px;
-    margin: 64px auto 24px;
-    line-height: 1.1;
-    line-height: 1;
+  font-family: 'Raleway', 'Segoe UI', sans-serif, 'Apple Color Emoji',
+    'Segoe UI Emoji';
+  font-weight: 800;
+  font-weight: 900;
+  text-align: center;
+  font-size: 64px;
+  font-size: 58px;
+  margin: 64px auto 24px;
+  line-height: 1.1;
+  line-height: 1;
 }
 
 .is-mobile h1 {
-    font-size: 28px;
-    font-size: 32px;
-    margin: 24px auto 16px;
+  font-size: 28px;
+  font-size: 32px;
+  margin: 24px auto 16px;
 }
 
 h2 {
-    font-family: 'Raleway', 'Segoe UI', sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
-    margin: 1.6em 0 .3em;
-    line-height: 1.1;
-    font-size: 1.1em;
-    font-size: 1.3em;
+  font-family: 'Raleway', 'Segoe UI', sans-serif, 'Apple Color Emoji',
+    'Segoe UI Emoji';
+  margin: 1.6em 0 0.3em;
+  line-height: 1.1;
+  font-size: 1.1em;
+  font-size: 1.3em;
 }
 
 p {
-    margin: 0 0 1em;
+  margin: 0 0 1em;
 }
 
 a {
-    color: #0470e1;
+  color: #0470e1;
 }
 
 .is-mobile .desktop {
-    display: none;
+  display: none;
 }
 
 .is-desktop .mobile {
-    display: none;
+  display: none;
 }

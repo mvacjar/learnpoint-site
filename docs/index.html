@@ -35,6 +35,22 @@
 <script src="/_scripts/components/language.js"></script>
 <script src="/_scripts/components/color-mode.js"></script>
 
+<script>
+  (function () {
+    const savedMode = localStorage.getItem('selected-color-mode');
+    if (savedMode) {
+      document.documentElement.classList.add(savedMode);
+    } else if (
+      window.matchMedia &&
+      window.matchMedia('(prefers-color-scheme: dark)').matches
+    ) {
+      document.documentElement.classList.add('dark-mode');
+    } else {
+      document.documentElement.classList.add('light-mode');
+    }
+  })();
+</script>
+
     <link rel="stylesheet" href="/_styles/pages/index.css">
     <link rel="stylesheet" href="/_styles/components/desktop-screenshot.css">
     <link rel="stylesheet" href="/_styles/components/mobile-screenshot.css">
@@ -43,23 +59,57 @@
 <body>
 
     <header class="header">
-    <nav class="header__nav">
-        <a href="/" class="header__logo" aria-label="Learnpoint Home">
-            <img class="header__logo-desktop-img" width="128" height="34" alt="" aria-hidden="true" src="/_images/logos/learnpoint-logo.svg" />
-            <img class="header__logo-mobile-img" width="113" height="30" alt="" aria-hidden="true" src="/_images/logos/learnpoint-logo.svg" />
-        </a>
-        <div class="header__links">
-            <a class="header__link" href="/help/">
-                <span lang="en">Help</span>
-                <span lang="sv">Hjälp</span>
-            </a>
-            <a class="header__link" href="/sign-in.html">
-                <span lang="en">Sign in</span>
-                <span lang="sv">Logga in</span>
-            </a>
-        </div>
-    </nav>
+  <nav class="header__nav">
+    <a href="/" class="header__logo" aria-label="Learnpoint Home">
+      <!-- Desktop Logos -->
+      <img
+        class="header__logo-desktop-img light-desktop-mode-logo"
+        width="128"
+        height="34"
+        alt=""
+        aria-hidden="true"
+        src="/_images/logos/learnpoint-logo.svg"
+      />
+      <img
+        class="header__logo-desktop-img dark-desktop-mode-logo"
+        width="128"
+        height="34"
+        alt=""
+        aria-hidden="true"
+        src="/_images/logos/learnpoint-logo-dark.svg"
+      />
+
+      <!-- Mobile Logos -->
+      <img
+        class="header__logo-mobile-img light-mobile-mode-logo"
+        width="113"
+        height="30"
+        alt=""
+        aria-hidden="true"
+        src="/_images/logos/learnpoint-logo.svg"
+      />
+      <img
+        class="header__logo-mobile-img dark-mobile-mode-logo"
+        width="113"
+        height="30"
+        alt=""
+        aria-hidden="true"
+        src="/_images/logos/learnpoint-logo-dark.svg"
+      />
+    </a>
+    <div class="header__links">
+      <a class="header__link" href="/help/">
+        <span lang="en">Help</span>
+        <span lang="sv">Hjälp</span>
+      </a>
+      <a class="header__link" href="/sign-in.html">
+        <span lang="en">Sign in</span>
+        <span lang="sv">Logga in</span>
+      </a>
+    </div>
+  </nav>
 </header>
+
 
     <main class="main__container">
         <h1 lang="en">Delightfully simple learning management.</h1>

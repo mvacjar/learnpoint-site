@@ -11,15 +11,16 @@
     0 10px 40px -20px rgba(0, 0, 0, 0.75), 0 20px 60px -25px rgba(0, 0, 0, 0.75),
     0 20px 20px -30px rgba(0, 0, 0, 0.8), 0 40px 30px -40px rgba(0, 0, 0, 0.75),
     0 60px 40px -50px rgba(0, 0, 0, 0.8), 0 16px 32px rgba(0, 0, 0, 1);
+
+  --dark-box-shadow-news: 0 0 0 1px rgba(0, 0, 0, 0.06),
+    0 3px 10px -5px rgba(0, 0, 0, 0.3), 0 6px 15px -7.5px rgba(0, 0, 0, 0.3),
+    0 6px 5px -7.5px rgba(0, 0, 0, 0.5), 0 10px 7.5px -10px rgba(0, 0, 0, 0.3),
+    0 10px 20px -12.5px rgba(0, 0, 0, 0.5), 0 4px 15px rgba(0, 0, 0, 1);
 }
 
 /* ==========================================================================
-   Light Mode
+   Color Scheme Buttons
    ========================================================================== */
-
-body {
-  transition: background-color 0.5s ease, color 0.5s ease;
-}
 
 .footer__select-color-mode-panel {
   display: flex;
@@ -52,39 +53,118 @@ body {
 }
 
 /* ==========================================================================
-   Dark Mode
+  Light Mode
    ========================================================================== */
 
-body.dark-mode {
+html.is-lightmode {
+  background-color: var(--bg-bd-light);
+  color: #000;
+}
+
+.is-lightmode body {
+  background-color: #fefcf6;
+  color: #000;
+}
+
+.is-lightmode .header {
+  background-color: var(--bg-bd-light);
+  color: #000;
+}
+
+.is-lightmode .main__container {
+  background-color: var(--bg-bd-light);
+  color: #000;
+}
+
+.is-lightmode .footer {
+  background-color: var(--bg-bd-light);
+  color: #000;
+}
+
+.is-lightmode .print__hide {
+  background-color: var(--bg-bd-light);
+  color: #000;
+}
+
+/* ==========================================================================
+   Dark Mode
+   ========================================================================== */
+html,
+body,
+.header,
+.main__container,
+.footer,
+.print__hide {
+  transition: background-color 0.5s ease, color 0.2s ease;
+}
+
+html.is-darkmade {
+  background-color: var(--bg-bd-dark);
+  color: var(--color-light);
+}
+
+.is-darkmade body {
+  background-color: #262528;
+  color: #e0e0e0;
+}
+
+.is-darkmade .header {
+  background-color: var(--bg-bd-dark);
+  color: var(--color-light);
+}
+
+.is-darkmade .main__container {
+  background-color: var(--bg-bd-dark);
+  color: var(--color-light);
+}
+
+.is-darkmade .footer {
+  background-color: var(--bg-bd-dark);
+  color: var(--color-light);
+}
+
+.is-darkmade .print__hide {
   background-color: var(--bg-bd-dark);
   color: var(--color-light);
 }
 
 /* index__feature-links */
 
-.dark-mode .index__features a {
+.is-darkmade .index__features a {
   color: var(--color-blue-link);
 }
 
 /* desktop-screenshot */
 
-.dark-mode .desktop-screenshot {
+.is-darkmade .desktop-screenshot {
   box-shadow: var(--dark-box-shadow);
 }
 
 /* index__contact */
 
-.dark-mode .index__contact {
+.is-darkmade .index__contact {
   background: var(--bg-blue);
+}
+
+/* news */
+
+.is-darkmade .news {
+  background-color: var(--color-grey);
+  color: var(--color-light);
+  box-shadow: var(--dark-box-shadow-news);
+}
+
+.is-darkmade .news-list a .title {
+  color: var(--color-light);
 }
 
 /* Footer */
 
-.dark-mode .footer__link {
+/* .is-darkmade .footer__link {
   color: var(--color-light);
 }
 
-.dark-mode .footer__select-light-mode-button {
+.is-darkmade .footer__select-light-mode-button {
   color: var(--color-light);
   font-weight: 100;
   cursor: pointer;
@@ -93,7 +173,7 @@ body.dark-mode {
   }
 }
 
-.dark-mode .footer__select-dark-mode-button {
+.is-darkmade .footer__select-dark-mode-button {
   font-weight: 700;
   color: var(--color-light);
   &:hover {
@@ -101,6 +181,6 @@ body.dark-mode {
   }
 }
 
-.dark-mode .footer__select-language-button {
+.is-darkmade .footer__select-language-button {
   color: var(--color-light);
-}
+} */
