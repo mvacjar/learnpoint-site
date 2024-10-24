@@ -28,24 +28,24 @@ body,
   transition: background-color 0.5s ease, color 0.2s ease;
 }
 
-html.is-lightmode {
-  background-color: #fefcf6;
+html.is-light {
+  background-color: var(--bg-light);
   color: #000;
 }
 
-html.is-darkmode {
-  background-color: #262528;
-  color: #e0e0e0;
+html.is-dark {
+  background-color: var(--bg-dark);
+  color: var(--color-light);
 }
 
-.is-lightmode body {
-  background-color: #fefcf6;
+.is-light body {
+  background-color: var(--bg-light);
   color: #000;
 }
 
-.is-darkmode body {
-  background-color: #262528;
-  color: #e0e0e0;
+.is-dark body {
+  background-color: var(--bg-dark);
+  color: var(--color-light);
 }
 
 .main__container {
@@ -55,14 +55,14 @@ html.is-darkmode {
   padding: 0 16px;
 }
 
-.is-lightmode .main__container {
-  background-color: #fefcf6;
+.is-light .main__container {
+  background-color: var(--bg-light);
   color: #000;
 }
 
-.is-darkmode .main__container {
-  background-color: #262528;
-  color: #e0e0e0;
+.is-dark .main__container {
+  background-color: var(--bg-dark);
+  color: var(--color-light);
 }
 
 h1 {
@@ -99,6 +99,14 @@ p {
 
 a {
   color: #0470e1;
+}
+
+.is-dark a {
+  color: var(--color-blue-link);
+}
+
+.is-dark a:hover {
+  color: var(--color-blue-link);
 }
 
 .is-mobile .desktop {

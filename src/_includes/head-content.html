@@ -24,24 +24,9 @@
 <link rel="stylesheet" href="/_styles/components/header.css" />
 <link rel="stylesheet" href="/_styles/components/footer.css" />
 <link rel="stylesheet" href="/_styles/components/language.css" />
+<link rel="stylesheet" href="/_styles/components/color-theme.css" />
 
 <script src="/_scripts/components/print.js"></script>
 <script src="/_scripts/components/is-mobile.js"></script>
 <script src="/_scripts/components/language.js"></script>
 <script src="/_scripts/components/color-mode.js"></script>
-
-<script>
-  (function () {
-    const savedMode = localStorage.getItem('selected-color-mode');
-    if (savedMode) {
-      document.documentElement.classList.add(savedMode);
-    } else if (
-      window.matchMedia &&
-      window.matchMedia('(prefers-color-scheme: dark)').matches
-    ) {
-      document.documentElement.classList.add('dark-mode');
-    } else {
-      document.documentElement.classList.add('light-mode');
-    }
-  })();
-</script>

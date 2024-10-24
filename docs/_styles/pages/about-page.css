@@ -1,73 +1,75 @@
 .about-page__content {
-    max-width: 640px;
-    margin: 0 auto;
+  max-width: 640px;
+  margin: 0 auto;
 }
-
-
 
 /* ==========================================================================
    Team Members
    ========================================================================== */
 
 .about-page__team-members {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 24px 24px;
-    margin: 2em auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px 24px;
+  margin: 2em auto;
 }
 
 .is-mobile .about-page__team-members {
-    gap: 16px 4px;
-    margin: 2em -0.8em;
+  gap: 16px 4px;
+  margin: 2em -0.8em;
 }
 
 .about-page__team-member {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 130px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 130px;
 }
 
 .is-mobile .about-page__team-member {
-    width: 110px;
+  width: 110px;
 }
 
 .about-page__team-member-image {
-    display: block;
-    width: 132px;
-    height: 132px;
-    margin-bottom: 8px;
-    border-radius: 50%;
-    filter: grayscale(.3) sepia(0.08);
+  display: block;
+  width: 132px;
+  height: 132px;
+  margin-bottom: 8px;
+  border-radius: 50%;
+  filter: grayscale(0.3) sepia(0.08);
 }
 
 .is-mobile .about-page__team-member-image {
-    width: 100px;
-    height: 100px;
+  width: 100px;
+  height: 100px;
 }
 
 .about-page__team-member-name {
-    display: block;
-    text-align: center;
-    line-height: 1.2;
-    font-size: .8em;
-    font-weight: bold;
+  display: block;
+  text-align: center;
+  line-height: 1.2;
+  font-size: 0.8em;
+  font-weight: bold;
 }
 
 .is-mobile .about-page__team-member-name {
-    font-size: .7em;
+  font-size: 0.7em;
 }
 
 .about-page__team-member-department {
-    display: block;
-    text-align: center;
-    line-height: 1.6;
-    font-size: .75em;
-    color: #444;
-    /* display: none; */
+  display: block;
+  text-align: center;
+  line-height: 1.6;
+  font-size: 0.75em;
+  color: #444;
+  /* display: none; */
+}
+
+.is-dark .about-page__team-member-department {
+  color: #8e8e8e;
 }
 
 .is-mobile .about-page__team-member-department {
-    font-size: .7em;
+  font-size: 0.7em;
 }

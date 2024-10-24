@@ -3,55 +3,56 @@
    ========================================================================= */
 
 .help-index-page__support-contact {
-    line-height: 1.6;
-    margin-bottom: 32px;
+  line-height: 1.6;
+  margin-bottom: 32px;
 }
-
-
 
 /* =========================================================================
    Suppport Contact a
    ========================================================================= */
 
 .help-index-page__support-contact a {
-    color: inherit;
-    text-decoration: none;
-    padding: 0 2px;
-    display: inline-flex;
-    align-items: center;
-    border-bottom: 1.5px solid transparent;
+  color: inherit;
+  text-decoration: none;
+  padding: 0 2px;
+  display: inline-flex;
+  align-items: center;
+  border-bottom: 1.5px solid transparent;
 }
 
 .help-index-page__support-contact a:hover {
-    color: #0470e1;
-    border-bottom: 1.5px solid #0470e1;
+  color: #0470e1;
+  border-bottom: 1.5px solid #0470e1;
 }
 
-
+.is-dark .help-index-page__support-contact a:hover {
+  color: var(--color-blue-link);
+  border-bottom: 1.5px solid var(--color-blue-link);
+}
 
 /* =========================================================================
    Suppport Contact svg
    ========================================================================= */
 
 .help-index-page__support-contact svg {
-    color: #0470e1;
-    height: 16px;
-    width: 16px;
-    margin: 0 12px 0 0;
-    margin-top: 1px;
+  color: #0470e1;
+  height: 16px;
+  width: 16px;
+  margin: 0 12px 0 0;
+  margin-top: 1px;
 }
 
-
+.is-dark .help-index-page__support-contact svg {
+  color: var(--color-blue-link);
+}
 
 /* =========================================================================
    Suppport Opening Hours
    ========================================================================= */
 
 .help-index-page__support-opening-hours {
-    margin-bottom: 2px;
+  margin-bottom: 2px;
 }
-
-
 
 /* =========================================================================
    Suppport Open / Closed / Closed For Lunch Labels
@@ -60,164 +61,163 @@
 .help-index-page__support-open-label,
 .help-index-page__support-closed-label,
 .help-index-page__support-closed-for-lunch-label {
-    padding: .1em .7em .1em .65em;
-    border-radius: .5em;
-    font-size: .9em;
+  padding: 0.1em 0.7em 0.1em 0.65em;
+  border-radius: 0.5em;
+  font-size: 0.9em;
 }
 
 .help-index-page__support-open-label {
-    color: #177b36;
-    background-color: rgba(24, 128, 56, .08);
+  color: #177b36;
+  background-color: rgba(24, 128, 56, 0.08);
+}
+
+.is-dark .help-index-page__support-open-label {
+  color: #1eac4b;
+  background-color: rgba(21, 230, 83, 0.08);
 }
 
 .help-index-page__support-closed-label,
 .help-index-page__support-closed-for-lunch-label {
-    color: #ce2f25;
-    background-color: rgba(217, 48, 37, .06);
+  color: #ce2f25;
+  background-color: rgba(217, 48, 37, 0.06);
 }
 
-.help-index-page__support-opening-hours.CLOSED .help-index-page__support-open-label,
-.help-index-page__support-opening-hours.CLOSED-FOR-LUNCH .help-index-page__support-open-label {
-    display: none;
+.is-dark .help-index-page__support-closed-label,
+.is-dark .help-index-page__support-closed-for-lunch-label {
+  color: #f34c40;
+  background-color: rgba(254, 81, 68, 0.06);
 }
 
-.help-index-page__support-opening-hours.OPEN .help-index-page__support-closed-label,
-.help-index-page__support-opening-hours.CLOSED-FOR-LUNCH .help-index-page__support-closed-label {
-    display: none;
+.help-index-page__support-opening-hours.CLOSED
+  .help-index-page__support-open-label,
+.help-index-page__support-opening-hours.CLOSED-FOR-LUNCH
+  .help-index-page__support-open-label {
+  display: none;
 }
 
-.help-index-page__support-opening-hours.OPEN .help-index-page__support-closed-for-lunch-label,
-.help-index-page__support-opening-hours.CLOSED .help-index-page__support-closed-for-lunch-label {
-    display: none;
+.help-index-page__support-opening-hours.OPEN
+  .help-index-page__support-closed-label,
+.help-index-page__support-opening-hours.CLOSED-FOR-LUNCH
+  .help-index-page__support-closed-label {
+  display: none;
 }
 
-
+.help-index-page__support-opening-hours.OPEN
+  .help-index-page__support-closed-for-lunch-label,
+.help-index-page__support-opening-hours.CLOSED
+  .help-index-page__support-closed-for-lunch-label {
+  display: none;
+}
 
 /* =========================================================================
    Special Days Closed
    ========================================================================= */
 
 .help-index-page__special-days-closed {
-    display: none;
+  display: none;
 }
 
 .help-index-page__special-days-closed.SHOW {
-    display: block;
+  display: block;
 }
 
 .help-index-page__special-days-closed span {
-    font-size: .8em;
-    display: inline-block;
-    padding: .2em 0 0 0;
-    margin: .6em 0 1em;
-    font-weight: bold;
+  font-size: 0.8em;
+  display: inline-block;
+  padding: 0.2em 0 0 0;
+  margin: 0.6em 0 1em;
+  font-weight: bold;
 }
 
 .help-index-page__special-days-closed p {
-    font-weight: 600;
-    margin: 0 0 .2em;
-    font-size: .8em;
+  font-weight: 600;
+  margin: 0 0 0.2em;
+  font-size: 0.8em;
 }
-
-
 
 /* =========================================================================
    Suppport Opening Hours Table
    ========================================================================= */
 
 .help-index-page__support-opening-hours-table {
-    border-collapse: collapse;
-    font-family: monospace, "Apple Color Emoji", "Segoe UI Emoji";
-    font-size: .9em;
+  border-collapse: collapse;
+  font-family: monospace, 'Apple Color Emoji', 'Segoe UI Emoji';
+  font-size: 0.9em;
 }
 
 .help-index-page__support-opening-hours-table td {
-    padding: 0 1em 0 .1em;
+  padding: 0 1em 0 0.1em;
 }
-
-
 
 /* =========================================================================
    Sub Header
    ========================================================================= */
 
 .help-index-page__sub-header {
-    text-align: center;
-    margin: 2em 0 1em;
-    font-size: 2em;
+  text-align: center;
+  margin: 2em 0 1em;
+  font-size: 2em;
 }
-
-
 
 /* =========================================================================
    Sub Header Tagline
    ========================================================================= */
 
 .help-index-page__sub-header-tagline {
-    text-align: center;
-    margin:0 auto 2em;
-    max-width: 640px;
+  text-align: center;
+  margin: 0 auto 2em;
+  max-width: 640px;
 }
-
-
 
 /* =========================================================================
    Photo Gallery
    ========================================================================= */
 
 .help-index-page__photo-gallery {
-    display: flex;
-    gap: 3%;
-    max-width: 380px;
-    margin: 0 auto 2em;
+  display: flex;
+  gap: 3%;
+  max-width: 380px;
+  margin: 0 auto 2em;
 }
-
-
 
 /* =========================================================================
    Photo Gallery Item
    ========================================================================= */
 
 .help-index-page__photo-gallery-item {
-    width: 25%;
-    flex-grow: 0;
+  width: 25%;
+  flex-grow: 0;
 }
-
-
 
 /* =========================================================================
    Photo
    ========================================================================= */
 
 .help-index-page__photo-gallery-item img {
-    width: 100%;
-    object-fit: contain;
-    display: block;
-    border-radius: 50%;
+  width: 100%;
+  object-fit: contain;
+  display: block;
+  border-radius: 50%;
 }
-
-
 
 /* =========================================================================
    Photo Caption
    ========================================================================= */
 
 .help-index-page__photo-gallery-item span {
-    text-align: center;
-    display: block;
-    font-weight: 600;
-    font-size: .8em;
-    padding: .5em 0;
+  text-align: center;
+  display: block;
+  font-weight: 600;
+  font-size: 0.8em;
+  padding: 0.5em 0;
 }
-
-
 
 /* =========================================================================
    Horizontal Rule
    ========================================================================= */
 
 .help-index-page__horizontal-rule {
-    border: 0;
-    height: 2px;
-    background: #444;
+  border: 0;
+  height: 2px;
+  background: #444;
 }

@@ -10,14 +10,14 @@
   margin: 64px auto;
 }
 
-.is-lightmode .footer {
-  background-color: #fefcf6;
+.is-light .footer {
+  background-color: var(--bg-light);
   color: #000;
 }
 
-.is-darkmode .footer {
-  background-color: #262528;
-  color: #e0e0e0;
+.is-dark .footer {
+  background-color: var(--bg-dark);
+  color: var(--color-light);
 }
 
 .footer__content {
@@ -32,10 +32,10 @@
 .is-mobile .footer__content {
   flex-direction: column;
 }
-.is-mobile .is-lightmode .footer__content {
+.is-mobile .is-light .footer__content {
   flex-direction: column;
 }
-.is-mobile .is-darkmode .footer__content {
+.is-mobile .is-dark .footer__content {
   flex-direction: column;
 }
 
@@ -68,8 +68,8 @@
   text-decoration: none;
 }
 
-.is-darkmode .footer__link {
-  color: #e0e0e0;
+.is-dark .footer__link {
+  color: var(--color-light);
 }
 
 .is-desktop .footer__link:hover {
@@ -77,11 +77,18 @@
 }
 
 .footer__link.EXTERNAL {
-  background-image: url(/_images/icons/external-link.svg);
   background-repeat: no-repeat;
   background-position: center right;
   background-size: 12px 12px;
   padding-right: 17px;
+}
+
+.is-light .footer__link.EXTERNAL {
+  background-image: url(/_images/icons/external-link.svg);
+}
+
+.is-dark .footer__link.EXTERNAL {
+  background-image: url(/_images/icons/external-link-dark.svg);
 }
 
 .footer__select-language-panel {
@@ -102,8 +109,8 @@
   -webkit-appearance: none;
 }
 
-.is-darkmode .footer__select-language-button {
-  color: #e0e0e0;
+.is-dark .footer__select-language-button {
+  color: var(--color-light);
 }
 
 html[lang='en'] .footer__select-language-button[data-select-language='en'],
@@ -123,7 +130,7 @@ html[lang='sv'].is-desktop
 .footer__select-color-mode-panel {
   display: flex;
   flex-direction: row;
-  color: #e0e0e0;
+  color: var(--color-light);
 }
 
 .footer__select-light-mode-button {
@@ -131,8 +138,8 @@ html[lang='sv'].is-desktop
   font-family: inherit;
 }
 
-.is-darkmode .footer__select-light-mode-button {
-  color: #e0e0e0;
+.is-dark .footer__select-light-mode-button {
+  color: var(--color-light);
   font-weight: 100;
   cursor: pointer;
   &:hover {
@@ -141,7 +148,7 @@ html[lang='sv'].is-desktop
 }
 
 .footer__select-dark-mode-button {
-  color: #666666;
+  color: var(--color-grey);
   cursor: pointer;
   font-weight: 100;
   font-family: inherit;
@@ -150,9 +157,9 @@ html[lang='sv'].is-desktop
   }
 }
 
-.is-darkmode .footer__select-dark-mode-button {
+.is-dark .footer__select-dark-mode-button {
   font-weight: 700;
-  color: #e0e0e0;
+  color: var(--color-light);
   &:hover {
     text-decoration: none;
   }

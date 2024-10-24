@@ -16,7 +16,7 @@
   transition: opacity, transform 0.6s;
 }
 
-.is-darkmode .desktop-screenshot {
+.is-dark .desktop-screenshot {
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.06),
     0 10px 40px -20px rgba(0, 0, 0, 0.75), 0 20px 60px -25px rgba(0, 0, 0, 0.75),
     0 20px 20px -30px rgba(0, 0, 0, 0.8), 0 40px 30px -40px rgba(0, 0, 0, 0.75),

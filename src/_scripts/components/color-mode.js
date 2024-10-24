@@ -4,14 +4,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
 document.addEventListener('click', (event) => {
   if (event.target.matches('.footer__select-light-mode-button')) {
-    applyColorMode('is-lightmode');
+    applyColorScheme('is-light');
   } else if (event.target.matches('.footer__select-dark-mode-button')) {
-    applyColorMode('is-darkmode');
+    applyColorScheme('is-dark');
   }
 });
 
-function applyColorMode(mode) {
-  document.documentElement.classList.remove('is-lightmode', 'is-darkmode');
+function applyColorScheme(mode) {
+  document.documentElement.classList.remove('is-light', 'is-dark');
   document.documentElement.classList.add(mode);
   localStorage.setItem('selected-color-mode', mode);
 }
@@ -20,10 +20,24 @@ function detectPreferredColorScheme() {
   const savedMode = localStorage.getItem('selected-color-mode');
 
   if (savedMode) {
-    applyColorMode(savedMode);
+    applyColorScheme(savedMode);
   } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-    applyColorMode('is-darkmode');
+    applyColorScheme('is-dark');
   } else {
-    applyColorMode('is-lightmode');
+    applyColorScheme('is-light');
   }
 }
+
+(function () {
+  const savedMode = localStorage.getItem('selected-color-mode');
+  if (savedMode) {
+    document.documentElement.classList.add(savedMode);
+  } else if (
+    window.matchMedia &&
+    window.matchMedia('(prefers-color-scheme: dark)').matches
+  ) {
+    document.documentElement.classList.add('is-dark');
+  } else {
+    document.documentElement.classList.add('is-light');
+  }
+})();

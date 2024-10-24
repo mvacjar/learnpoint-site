@@ -4,13 +4,9 @@
   margin: 0 auto;
 }
 
-.is-darkmode .news {
-  background-color: #666666;
-  color: #e0e0e0;
-  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.06), 0 3px 10px -5px rgba(0, 0, 0, 0.3),
-    0 6px 15px -7.5px rgba(0, 0, 0, 0.3), 0 6px 5px -7.5px rgba(0, 0, 0, 0.5),
-    0 10px 7.5px -10px rgba(0, 0, 0, 0.3),
-    0 10px 20px -12.5px rgba(0, 0, 0, 0.5), 0 4px 15px rgba(0, 0, 0, 1);
+.is-dark .news {
+  background-color: #767676;
+  color: var(--color-light);
 }
 
 .news-list {
@@ -39,8 +35,18 @@
   box-shadow: 0 4px 16px rgb(0 0 0 / 10%), 0 2px 8px rgb(0 0 0 / 2%);
 }
 
+.is-dark.is-desktop .news-list a:hover {
+  background-color: #525252;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.363), 0 2px 8px rgba(0, 0, 0, 0.355);
+}
+
 .is-desktop .news-list a:active {
   background-color: rgba(0, 0, 0, 0.03);
+  box-shadow: none;
+}
+
+.is-dark.is-desktop .news-list a:active {
+  background-color: #52525233;
   box-shadow: none;
 }
 
@@ -56,8 +62,8 @@
   font-size: 1em;
 }
 
-.is-darkmode .news-list a .title {
-  color: #e0e0e0;
+.is-dark .news-list a .title {
+  color: #d5d5d5;
 }
 
 .news-list a:hover .title {
@@ -65,9 +71,18 @@
   color: #000;
 }
 
+.is-dark .news-list a:hover .title {
+  color: var(--color-light);
+}
+
 .news-list a .date,
 .news-list a:hover .date {
   font-weight: normal;
   font-size: 0.8em;
   margin: 0 2px;
+}
+
+.is-dark .news-list a .date,
+.is-dark .news-list a:hover .date {
+  color: var(--color-light);
 }

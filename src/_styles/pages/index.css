@@ -23,8 +23,8 @@
   padding: 0;
 }
 
-.is-darkmode .index__features a {
-  color: #61a1fc;
+.is-dark .index__features a {
+  color: var(--color-blue-link);
 }
 
 /* =========================================================================
@@ -116,8 +116,8 @@
   background: #0780ff;
 }
 
-.is-darkmode .index__contact {
-  background: #135da8;
+.is-dark .index__contact {
+  background: var(--bg-blue);
 }
 
 .is-mobile .index__contact {
@@ -125,7 +125,7 @@
   margin: 32px auto;
 }
 
-.is-mobile .is-darkmode .index__contact {
+.is-mobile .is-dark .index__contact {
   padding: 38px 32px 12px;
   margin: 32px auto;
 }
@@ -170,6 +170,10 @@
   color: #fff;
   font-weight: 600;
   padding: 0 2px;
+}
+
+.is-dark .index__contact-link {
+  color: var(--color-light);
 }
 
 /* =========================================================================

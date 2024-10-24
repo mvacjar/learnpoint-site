@@ -23,14 +23,14 @@
   display: none !important;
 }
 
-.is-lightmode .print__hide {
-  background-color: #fefcf6;
+.is-light .print__hide {
+  background-color: var(--bg-light);
   color: #000;
 }
 
-.is-darkmode .print__hide {
-  background-color: #262528;
-  color: #e0e0e0;
+.is-dark .print__hide {
+  background-color: var(--bg-dark);
+  color: var(--color-light);
 }
 
 /* ==========================================================================

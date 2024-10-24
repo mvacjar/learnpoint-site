@@ -1,70 +1,92 @@
 .jobs__preamble {
-    text-align: center;
-    max-width: 640px;
-    margin: 0 auto;
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto;
 }
 
-
 .jobs__list {
-    max-width: 520px;
-    margin: 3em auto;
-    padding: 0;
+  max-width: 520px;
+  margin: 3em auto;
+  padding: 0;
 }
 
 .jobs__list li {
-    margin: 0 0 1.2em;
-    padding: 0;
-    list-style: none;
+  margin: 0 0 1.2em;
+  padding: 0;
+  list-style: none;
 }
 
 .jobs__list a {
-    display: block;
-    background-color: #fff;
-    background-color: rgba(255, 255, 255, .85);
-    box-shadow: 0 4px 16px rgb(0 0 0 / 4%),
-        0 2px 8px rgb(0 0 0 / 1%);
-    padding: 24px 32px;
-    border-radius: 8px;
-    text-decoration: none;
-    color: inherit;
-    transition-property: box-shadow, background-color;
-    transition-duration: .06s;
+  display: block;
+  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 4px 16px rgb(0 0 0 / 4%), 0 2px 8px rgb(0 0 0 / 1%);
+  padding: 24px 32px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: inherit;
+  transition-property: box-shadow, background-color;
+  transition-duration: 0.06s;
+}
+
+.is-dark .jobs__list a {
+  background-color: var(--color-grey);
+}
+
+.is-dark .jobs__list a .jobs__title {
+  color: var(--color-light);
 }
 
 .is-desktop .jobs__list a:hover {
-    background-color: rgba(255, 255, 255, 1);
-    box-shadow: 0 4px 16px rgb(0 0 0 / 10%),
-        0 2px 8px rgb(0 0 0 / 2%);
+  background-color: rgba(255, 255, 255, 1);
+  box-shadow: 0 4px 16px rgb(0 0 0 / 10%), 0 2px 8px rgb(0 0 0 / 2%);
+}
+
+.is-dark.is-desktop .jobs__list a:hover {
+  background-color: var(--color-grey);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.363), 0 2px 8px rgba(0, 0, 0, 0.355);
 }
 
 .is-desktop .jobs__list a:active {
-    background-color: rgba(0, 0, 0, .03);
-    box-shadow: none;
+  background-color: rgba(0, 0, 0, 0.03);
+  box-shadow: none;
+}
+
+.is-dark.is-desktop .jobs__list a:active {
+  background-color: #343434;
 }
 
 .jobs__title {
-    font-family: inherit;
-    font-size: 1.2em;
-    font-weight: bold;
-    margin: 0 0 6px;
+  font-family: inherit;
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 0 0 6px;
+}
+
+.is-dark .jobs__title:hover {
+  color: var(--color-light);
 }
 
 .jobs__information {
-    line-height: 1.2;
-    padding: 3px 0 0;
+  line-height: 1.2;
+  padding: 3px 0 0;
 }
 
 .jobs__information-item {
-    font-size: .8em;
-    color: #1d2d35;
+  font-size: 0.8em;
+  color: #1d2d35;
+}
+
+.is-dark .jobs__information-item {
+  color: var(--color-light);
 }
 
 .jobs__information-item::after {
-    content: ' ★';
-    display: inline;
-    padding: 0 6px;
+  content: ' ★';
+  display: inline;
+  padding: 0 6px;
 }
 
 .jobs__information-item:last-child::after {
-    content: none;
+  content: none;
 }
