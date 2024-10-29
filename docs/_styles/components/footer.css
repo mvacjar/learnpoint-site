@@ -113,8 +113,10 @@
   color: var(--color-light);
 }
 
-html[lang='en'] .footer__select-language-button[data-select-language='en'],
-html[lang='sv'] .footer__select-language-button[data-select-language='sv'] {
+html[lang='en']
+  .footer__select-language-button[data-select-language='en'],
+html[lang='sv']
+  .footer__select-language-button[data-select-language='sv'] {
   color: inherit;
   font-weight: bold;
   cursor: text;
@@ -130,24 +132,29 @@ html[lang='sv'].is-desktop
 .footer__select-color-mode-panel {
   display: flex;
   flex-direction: row;
+  margin-top: 10px;
   color: var(--color-light);
 }
 
 .footer__select-light-mode-button {
+  display: none;
   font-weight: 700;
   font-family: inherit;
 }
 
 .is-dark .footer__select-light-mode-button {
+  display: block;
   color: var(--color-light);
   font-weight: 100;
   cursor: pointer;
   &:hover {
     text-decoration: underline;
   }
+  stroke: #ffffff;
 }
 
 .footer__select-dark-mode-button {
+  display: none;
   color: var(--color-grey);
   cursor: pointer;
   font-weight: 100;
@@ -157,12 +164,10 @@ html[lang='sv'].is-desktop
   }
 }
 
-.is-dark .footer__select-dark-mode-button {
-  font-weight: 700;
-  color: var(--color-light);
-  &:hover {
-    text-decoration: none;
-  }
+.is-light .footer__select-dark-mode-button {
+  display: block;
+  color: #000;
+  stroke: #000;
 }
 
 .footer__select-light-mode-button,
