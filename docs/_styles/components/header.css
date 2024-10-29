@@ -53,25 +53,35 @@
    Logo Img
    ========================================================================== */
 
-.header__logo-desktop-img,
-.header__logo-mobile-img {
-  display: none;
+.is-desktop.is-light .logo,
+.is-desktop.is-dark .logo {
+  display: block;
+  width: 128px;
+  height: 34px;
 }
 
-.is-desktop.is-light .header__logo-desktop-img.light-desktop-mode-logo {
+.is-mobile.is-light .logo,
+.is-mobile.is-dark .logo {
   display: block;
+  width: 113px;
+  height: 30px;
 }
 
-.is-desktop.is-dark .header__logo-desktop-img.dark-desktop-mode-logo {
-  display: block;
+.is-desktop.is-light .logo #path-word,
+.is-mobile.is-light .logo #path-word {
+  fill: #0f1016;
 }
 
-.is-mobile.is-light .header__logo-mobile-img.light-mobile-mode-logo {
-  display: block;
+.is-desktop.is-dark .logo #path-word,
+.is-mobile.is-dark .logo #path-word {
+  fill: #e0e0e0;
 }
 
-.is-mobile.is-dark .header__logo-mobile-img.dark-mobile-mode-logo {
-  display: block;
+.is-desktop.is-light .logo #path-dot,
+.is-desktop.is-dark .logo #path-dot,
+.is-mobile.is-light .logo #path-dot,
+.is-mobile.is-dark .logo #path-dot {
+  fill: #0780ff;
 }
 
 /* ==========================================================================

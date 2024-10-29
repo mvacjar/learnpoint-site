@@ -173,3 +173,11 @@ html[lang='sv'].is-desktop
   margin: 0;
   padding: 0;
 }
+
+.is-light .vertical-bar {
+  color: black;
+}
+
+.is-dark .vertical-bar {
+  color: var(--color-light);
+}

@@ -3,61 +3,6 @@
 // });
 
 // document.addEventListener('click', (event) => {
-//   const toggleSwitch = document.querySelector(
-//     '.footer__select-color-mode-panel input[type="checkbox"]'
-//   );
-
-//   if (event.target.matches('.footer__select-light-mode-button')) {
-//     applyColorScheme('is-light');
-//     toggleSwitch.checked = false;
-//   } else if (event.target.matches('.footer__select-dark-mode-button')) {
-//     applyColorScheme('is-dark');
-//     toggleSwitch.checked = true;
-//   } else if (
-//     event.target.matches(
-//       '.footer__select-color-mode-panel input[type="checkbox"]'
-//     )
-//   ) {
-//     applyColorScheme(toggleSwitch.checked ? 'is-dark' : 'is-light');
-//   }
-// });
-
-// function applyColorScheme(mode) {
-//   document.documentElement.classList.remove('is-light', 'is-dark');
-//   document.documentElement.classList.add(mode);
-//   localStorage.setItem('selected-color-mode', mode);
-// }
-
-// function detectPreferredColorScheme() {
-//   const savedMode = localStorage.getItem('selected-color-mode');
-//   const toggleSwitch = document.querySelector(
-//     '.footer__select-color-mode-panel input[type="checkbox"]'
-//   );
-//   const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-
-//   if (savedMode) {
-//     applyColorScheme(savedMode);
-//     toggleSwitch.checked = savedMode === 'is-dark';
-//   } else {
-//     applyColorScheme(prefersDark ? 'is-dark' : 'is-light');
-//     toggleSwitch.checked = prefersDark;
-//   }
-// }
-
-// (function () {
-//   const savedMode = localStorage.getItem('selected-color-mode');
-//   const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-//   const mode = savedMode || (prefersDark ? 'is-dark' : 'is-light');
-//   document.documentElement.classList.add(mode);
-// })();
-
-/////////
-
-// document.addEventListener('DOMContentLoaded', () => {
-//   detectPreferredColorScheme();
-// });
-
-// document.addEventListener('click', (event) => {
 //   if (event.target.matches('.footer__select-light-mode-button')) {
 //     applyColorScheme('is-light');
 //   } else if (event.target.matches('.footer__select-dark-mode-button')) {
@@ -96,3 +41,42 @@
 //     document.documentElement.classList.add('is-light');
 //   }
 // })();
+
+(function () {
+  const applyColorScheme = (mode) => {
+    document.documentElement.classList.remove('is-light', 'is-dark');
+    document.documentElement.classList.add(mode);
+    localStorage.setItem('selected-color-mode', mode);
+  };
+
+  const detectPreferredColorScheme = () => {
+    const savedMode = localStorage.getItem('selected-color-mode');
+
+    if (savedMode) {
+      applyColorScheme(savedMode);
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      applyColorScheme('is-dark');
+    } else {
+      applyColorScheme('is-light');
+    }
+  };
+
+  detectPreferredColorScheme();
+
+  document.addEventListener('DOMContentLoaded', () => {
+    document.documentElement.classList.add(
+      localStorage.getItem('selected-color-mode') ||
+        (window.matchMedia('(prefers-color-scheme: dark)').matches
+          ? 'is-dark'
+          : 'is-light')
+    );
+  });
+
+  document.addEventListener('click', (event) => {
+    if (event.target.matches('.footer__select-light-mode-button')) {
+      applyColorScheme('is-light');
+    } else if (event.target.matches('.footer__select-dark-mode-button')) {
+      applyColorScheme('is-dark');
+    }
+  });
+})();
