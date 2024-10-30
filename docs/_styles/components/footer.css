@@ -169,20 +169,3 @@ html[lang='sv'].is-desktop
   color: #000;
   stroke: #000;
 }
-
-.footer__select-light-mode-button,
-.footer__select-dark-mode-button {
-  border: none;
-  background-color: transparent;
-  font-size: 14px;
-  margin: 0;
-  padding: 0;
-}
-
-.is-light .vertical-bar {
-  color: black;
-}
-
-.is-dark .vertical-bar {
-  color: var(--color-light);
-}

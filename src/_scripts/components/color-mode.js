@@ -1,47 +1,61 @@
 (function () {
+  const Mode = {
+    dark: 'is-dark',
+    light: 'is-light',
+  };
+
   const applyColorScheme = (mode) => {
     document.documentElement.classList.remove('is-light', 'is-dark');
     document.documentElement.classList.add(mode);
     localStorage.setItem('selected-color-mode', mode);
   };
 
-  const detectPreferredColorScheme = () => {
+  function getColorScheme() {
     const savedMode = localStorage.getItem('selected-color-mode');
 
     if (savedMode) {
-      applyColorScheme(savedMode);
+      return savedMode;
     } else if (
       window.matchMedia('(prefers-color-scheme: dark)').matches
     ) {
-      applyColorScheme('is-dark');
+      return 'is-dark';
     } else {
-      applyColorScheme('is-light');
+      return 'is-light';
     }
-  };
+  }
 
-  detectPreferredColorScheme();
+  applyColorScheme(getColorScheme());
 
-  document.addEventListener('DOMContentLoaded', () => {
-    document.documentElement.classList.add(
-      localStorage.getItem('selected-color-mode') ||
-        (window.matchMedia('(prefers-color-scheme: dark)').matches
-          ? 'is-dark'
-          : 'is-light')
-    );
-  });
+  function toggleMode() {
+    const currentMode = getColorScheme();
+    if (currentMode === Mode.dark) {
+      applyColorScheme(Mode.light);
+    } else {
+      applyColorScheme(Mode.dark);
+    }
+  }
 
   document.addEventListener('click', (event) => {
-    const lightButton = event.target.closest(
-      '.footer__select-light-mode-button'
+    const toggleButton = event.target.closest(
+      '.footer__select-mode-button'
     );
-    const darkButton = event.target.closest(
-      '.footer__select-dark-mode-button'
-    );
-
-    if (lightButton) {
-      applyColorScheme('is-light');
-    } else if (darkButton) {
-      applyColorScheme('is-dark');
+    if (!toggleButton) {
+      return;
     }
+
+    toggleMode();
+
+    // const lightButton = event.target.closest(
+    //   '.footer__select-light-mode-button'
+    // );
+    // const darkButton = event.target.closest(
+    //   '.footer__select-dark-mode-button'
+    // );
+
+    // if (lightButton) {
+    //   applyColorScheme('is-light');
+    // } else if (darkButton) {
+    //   applyColorScheme('is-dark');
+    // }
   });
 })();
