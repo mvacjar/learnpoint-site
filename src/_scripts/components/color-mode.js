@@ -1,56 +1,51 @@
-// document.addEventListener('DOMContentLoaded', () => {
-//   detectPreferredColorScheme();
-// });
-
-// document.addEventListener('click', (event) => {
-//   if (event.target.matches('.footer__select-light-mode-button')) {
-//     applyColorScheme('is-light');
-//   } else if (event.target.matches('.footer__select-dark-mode-button')) {
-//     applyColorScheme('is-dark');
-//   }
-// });
-
-// function applyColorScheme(mode) {
-//   document.documentElement.classList.remove('is-light', 'is-dark');
-//   document.documentElement.classList.add(mode);
-//   localStorage.setItem('selected-color-mode', mode);
-// }
-
-// function detectPreferredColorScheme() {
-//   const savedMode = localStorage.getItem('selected-color-mode');
-
-//   if (savedMode) {
-//     applyColorScheme(savedMode);
-//   } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-//     applyColorScheme('is-dark');
-//   } else {
-//     applyColorScheme('is-light');
-//   }
-// }
-
 // (function () {
-//   const savedMode = localStorage.getItem('selected-color-mode');
-//   if (savedMode) {
-//     document.documentElement.classList.add(savedMode);
-//   } else if (
-//     window.matchMedia &&
-//     window.matchMedia('(prefers-color-scheme: dark)').matches
-//   ) {
-//     document.documentElement.classList.add('is-dark');
-//   } else {
-//     document.documentElement.classList.add('is-light');
-//   }
+//   const applyColorScheme = (mode) => {
+//     document.documentElement.classList.remove('is-light', 'is-dark');
+//     document.documentElement.classList.add(mode);
+//     localStorage.setItem('selected-color-scheme', mode);
+//   };
+
+//   const detectPreferredColorScheme = () => {
+//     const savedMode = localStorage.getItem('selected-color-scheme');
+
+//     if (savedMode) {
+//       applyColorScheme(savedMode);
+//     } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+//       applyColorScheme('is-dark');
+//     } else {
+//       applyColorScheme('is-light');
+//     }
+//   };
+
+//   detectPreferredColorScheme();
+
+//   document.addEventListener('DOMContentLoaded', () => {
+//     document.documentElement.classList.add(
+//       localStorage.getItem('selected-color-scheme') ||
+//         (window.matchMedia('(prefers-color-scheme: dark)').matches
+//           ? 'is-dark'
+//           : 'is-light')
+//     );
+//   });
+
+//   document.addEventListener('click', (event) => {
+//     if (event.target.matches('.footer__select-light-mode-button')) {
+//       applyColorScheme('is-light');
+//     } else if (event.target.matches('.footer__select-dark-mode-button')) {
+//       applyColorScheme('is-dark');
+//     }
+//   });
 // })();
 
 (function () {
   const applyColorScheme = (mode) => {
     document.documentElement.classList.remove('is-light', 'is-dark');
     document.documentElement.classList.add(mode);
-    localStorage.setItem('selected-color-mode', mode);
+    localStorage.setItem('selected-color-scheme', mode);
   };
 
   const detectPreferredColorScheme = () => {
-    const savedMode = localStorage.getItem('selected-color-mode');
+    const savedMode = localStorage.getItem('selected-color-scheme');
 
     if (savedMode) {
       applyColorScheme(savedMode);
@@ -64,18 +59,20 @@
   detectPreferredColorScheme();
 
   document.addEventListener('DOMContentLoaded', () => {
-    document.documentElement.classList.add(
-      localStorage.getItem('selected-color-mode') ||
-        (window.matchMedia('(prefers-color-scheme: dark)').matches
-          ? 'is-dark'
-          : 'is-light')
-    );
+    const switchToggle = document.getElementById('switch');
+    if (switchToggle) {
+      switchToggle.checked =
+        localStorage.getItem('selected-color-scheme') === 'is-dark';
+      switchToggle.addEventListener('change', (event) => {
+        applyColorScheme(event.target.checked ? 'is-dark' : 'is-light');
+      });
+    }
   });
 
   document.addEventListener('click', (event) => {
-    if (event.target.matches('.footer__select-light-mode-button')) {
+    if (event.target.matches('.icon-sun')) {
       applyColorScheme('is-light');
-    } else if (event.target.matches('.footer__select-dark-mode-button')) {
+    } else if (event.target.matches('.icon-moon')) {
       applyColorScheme('is-dark');
     }
   });
