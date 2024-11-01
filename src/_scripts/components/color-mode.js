@@ -77,3 +77,29 @@
     }
   });
 })();
+
+(function () {
+  document.addEventListener('DOMContentLoaded', () => {
+    const toggleSwitch = document.getElementById('switch');
+    const iconSun = document.querySelector('.icon-sun');
+    const iconMoon = document.querySelector('.icon-moon');
+
+    if (toggleSwitch.checked) {
+      iconSun.classList.remove('hidden');
+      iconMoon.classList.add('hidden');
+    } else {
+      iconSun.classList.add('hidden');
+      iconMoon.classList.remove('hidden');
+    }
+
+    toggleSwitch.addEventListener('change', () => {
+      if (toggleSwitch.checked) {
+        iconSun.classList.remove('hidden');
+        iconMoon.classList.add('hidden');
+      } else {
+        iconSun.classList.add('hidden');
+        iconMoon.classList.remove('hidden');
+      }
+    });
+  });
+})();
