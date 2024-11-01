@@ -1,10 +1,23 @@
 .toggle {
-  width: 35px;
-  height: 35px;
+  width: 40px;
+  height: 40px;
   display: grid;
   place-items: center;
   cursor: pointer;
   line-height: 1;
+  transition: transform 0.2s ease-in-out;
+}
+
+.toggle:hover {
+  transform: scale(1.1);
+  /* border-radius: 50%;
+  border: 1px solid #93939316;
+  background-color: #adadad2d;
+  box-shadow: inset 1px 1px 4px #adadad55; */
+}
+
+.toggle:active {
+  transform: scale(0.9);
 }
 
 .input {
@@ -14,150 +27,56 @@
 .icon {
   grid-column: 1 / 1;
   grid-row: 1 / 1;
-  transition: transform 500ms;
+  transition: transform 500ms ease-in-out;
 }
 
-.icon--moon {
-  transition-delay: 200ms;
-  &:hover {
-    color: #237cb3;
-    filter: drop-shadow(1px 1px 2px #828282a3);
+@keyframes rotateAndScaleIn {
+  0% {
+    transform: scale(0) rotate(0deg);
+  }
+  80% {
+    transform: scale(1.1) rotate(360deg);
+  }
+  95% {
+    transform: scale(1.05) rotate(360deg);
+  }
+  100% {
+    transform: scale(1) rotate(360deg);
   }
 }
 
+@keyframes rotateAndScaleOut {
+  0% {
+    transform: scale(1);
+  }
+  20% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0) rotate(360deg);
+  }
+}
+
+.icon--moon,
 .icon--sun {
   transform: scale(0);
-  &:hover {
-    filter: drop-shadow(1px 1px 2px #82828277);
-    color: #ffd451;
-  }
+  transition: transform 0.4s ease-in-out;
 }
 
 #switch:checked + .icon--moon {
-  transform: rotate(360deg) scale(0);
+  animation: rotateAndScaleOut 0.8s ease-in-out forwards;
 }
 
 #switch:checked ~ .icon--sun {
-  transition-delay: 200ms;
-  transform: scale(1) rotate(360deg);
+  animation-delay: 0.3s;
+  animation: rotateAndScaleIn 1s ease-in-out forwards;
 }
 
-/* ///////////////////////// */
-/* 
-.switch {
-  position: relative;
-  display: flex;
-  align-items: center;
-  width: 35px;
-  height: 15px;
-  background-color: #0c0f14;
-  border-radius: 30px;
-  padding: 4px;
-  user-select: none;
-  cursor: pointer;
-  overflow: hidden;
-  box-shadow: inset 1px 1px 2px #bcbcbc3e;
+#switch:not(:checked) ~ .icon--sun {
+  animation: rotateAndScaleOut 0.8s ease-in-out forwards;
 }
 
-.switch .svg {
-  transition: 300ms ease-in-out;
-  position: absolute;
-  left: 5px;
+#switch:not(:checked) + .icon--moon {
+  animation-delay: 0.3s;
+  animation: rotateAndScaleIn 1s ease-in-out forwards;
 }
-
-.switch .moon {
-  width: 12px;
-  fill: #52555a;
-  opacity: 1;
-}
-
-.switch .moon:hover {
-  fill: #2071a3;
-  filter: drop-shadow(1px 1px 4px #191919);
-}
-
-.switch .sun {
-  transform: translateY(-50%);
-  width: 11px;
-  height: 11px;
-  border-radius: 50%;
-  left: 49%;
-  top: 45%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  scale: 0.8;
-  opacity: 0;
-}
-
-.switch .sun .dot {
-  position: relative;
-  display: block;
-  width: 2.5px;
-  height: 2.5px;
-  border-radius: 50%;
-  left: 50%;
-  z-index: 1;
-  box-shadow: 11px 0px 0px #77797e, 10.3px 0px 0px #77797e,
-    -11px 0px 0px #77797e, -10.3px 0px 0px #77797e, 0px -11px 0px #77797e,
-    0px -10.3px 0px #77797e, 0px 11px 0px #77797e, 0px 10.3px 0px #77797e,
-    8px 8px 0px #77797e, 7.3px 7.3px 0px #77797e, 8px -8px 0px #77797e,
-    7.3px -7.3px 0px #77797e, -8px -8px 0px #77797e, -7.3px -7.3px 0px #77797e,
-    -8px 8px 0px #77797e, -7.3px 7.3px 0px #77797e;
-}
-
-.switch:hover .sun .dot {
-  position: relative;
-  display: block;
-  width: 2.5px;
-  height: 2.5px;
-  border-radius: 50%;
-  z-index: 1;
-  box-shadow: 11px 0px 0px #ffdf60, 10.3px 0px 0px #ffdf60,
-    -11px 0px 0px #ffdf60, -10.3px 0px 0px #ffdf60, 0px -11px 0px #ffdf60,
-    0px -10.3px 0px #ffdf60, 0px 11px 0px #ffdf60, 0px 10.3px 0px #ffdf60,
-    8px 8px 0px #ffdf60, 7.3px 7.3px 0px #ffdf60, 8px -8px 0px #ffdf60,
-    7.3px -7.3px 0px #ffdf60, -8px -8px 0px #ffdf60, -7.3px -7.3px 0px #ffdf60,
-    -8px 8px 0px #ffdf60, -7.3px 7.3px 0px #ffdf60;
-}
-
-.switch .sun .dot::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 13px;
-  height: 13px;
-  border-radius: 50%;
-  background: #77797e;
-}
-
-.switch:hover .sun .dot::before {
-  background: #ffda48;
-  filter: drop-shadow(1px 1px 4px #7b7b7b72);
-  box-shadow: inset 2px 2px 4px #ffb432d2;
-}
-
-.switch .circle {
-  appearance: none;
-  position: relative;
-  width: 22px;
-  height: 22px;
-  left: -22%;
-  transition: 500ms ease-in-out;
-}
-
-.switch:has(.circle:checked) {
-  background: #fffcf4;
-}
-
-.switch:has(.circle:checked) > .sun {
-  opacity: 1;
-  transition: 300ms ease-in-out;
-}
-
-.switch:has(.circle:checked) > .moon {
-  opacity: 0;
-  transition: 300ms ease-in-out;
-} */

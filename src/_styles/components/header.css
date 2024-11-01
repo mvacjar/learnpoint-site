@@ -41,11 +41,11 @@
    Logo
    ========================================================================== */
 
-.header__logo {
+.logo {
   padding: 24px 24px 18px;
 }
 
-.is-mobile .header__logo {
+.is-mobile .logo {
   padding: 22px 16px 20px;
 }
 
@@ -53,34 +53,26 @@
    Logo Img
    ========================================================================== */
 
-.is-desktop.is-light .logo,
-.is-desktop.is-dark .logo {
+.logo {
   display: block;
   width: 128px;
   height: 34px;
 }
 
-.is-mobile.is-light .logo,
-.is-mobile.is-dark .logo {
-  display: block;
+.is-mobile .logo {
   width: 113px;
   height: 30px;
 }
 
-.is-desktop.is-light .logo #path-word,
-.is-mobile.is-light .logo #path-word {
+/* .is-light .logo .path-word {
   fill: #0f1016;
-}
+} */
 
-.is-desktop.is-dark .logo #path-word,
-.is-mobile.is-dark .logo #path-word {
+.is-dark .logo .path-word {
   fill: #e0e0e0;
 }
 
-.is-desktop.is-light .logo #path-dot,
-.is-desktop.is-dark .logo #path-dot,
-.is-mobile.is-light .logo #path-dot,
-.is-mobile.is-dark .logo #path-dot {
+.logo .path-dot {
   fill: #0780ff;
 }
 
