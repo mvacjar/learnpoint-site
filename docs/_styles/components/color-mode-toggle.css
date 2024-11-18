@@ -1,29 +1,9 @@
-.toggle {
-  margin-top: 0.5rem;
-  width: 40px;
-  height: 40px;
-  display: grid;
-  place-items: center;
+.footer__select-icon-mode {
+  border: none;
+  background-color: transparent;
   cursor: pointer;
-  line-height: 1;
-  transition: transform 0.2s ease-in-out;
-}
-
-.toggle:hover {
-  transform: scale(1.1);
-  border-radius: 50%;
-  border: 1px solid #93939316;
-  background-color: #adadad2d;
-  box-shadow: inset 2px 2px 5px #adadad55;
-  margin-top: 0.5rem;
-}
-
-.toggle:active {
-  transform: scale(1);
-}
-
-.input {
-  display: none;
+  margin-top: 0.2rem;
+  padding: 0;
 }
 
 .icon {
@@ -32,25 +12,67 @@
   transition: transform 500ms ease-in-out;
 }
 
-.icon-moon,
-.icon-sun {
-  transform: scale(0);
-  transition: transform 0.4s ease-in-out;
+/* =========================================================================
+   Moon
+   ========================================================================= */
+
+.icon-moon svg {
+  fill: #e0e0e0;
+  height: 22px;
+  width: 22px;
 }
 
-.icon-moon.hidden,
-.icon-sun.hidden {
+/* .icon-moon:hover path {
+  fill: #0580ff;
+  transition: fill 0.3s ease-in-out;
+} */
+
+.is-light .icon-moon {
   display: none;
 }
 
-@keyframes rotateAndScaleIn {
+/* =========================================================================
+   Sun
+   ========================================================================= */
+
+.icon-sun svg {
+  fill: #000000;
+  height: 23px;
+  width: 23px;
+}
+
+/* .icon-sun:hover path {
+  fill: #000;
+  transition: fill 0.3s ease-in-out;
+} */
+
+.is-dark .icon-sun {
+  display: none;
+}
+
+/* =========================================================================
+  Animations
+   ========================================================================= */
+
+/*----- Wheel -----*/
+
+.is-dark .icon-moon {
+  display: block;
+  transform: scale(1);
+  animation: rotateAndScaleInMoon 0.3s ease-in-out;
+}
+
+.is-light .icon-sun {
+  display: block;
+  transform: scale(1);
+  animation: rotateAndScaleInSun 0.3s ease-in-out;
+}
+
+@keyframes rotateAndScaleInMoon {
   0% {
-    transform: scale(0) rotate(0deg);
+    transform: scale(0.9) rotate(180deg);
   }
   80% {
-    transform: scale(1.1) rotate(360deg);
-  }
-  95% {
     transform: scale(1.05) rotate(360deg);
   }
   100% {
@@ -58,32 +80,14 @@
   }
 }
 
-@keyframes rotateAndScaleOut {
+@keyframes rotateAndScaleInSun {
   0% {
-    transform: scale(1);
+    transform: scale(0.9) rotate(250deg);
   }
-  20% {
-    transform: scale(1);
+  80% {
+    transform: scale(1.05) rotate(360deg);
   }
   100% {
-    transform: scale(0) rotate(360deg);
+    transform: scale(1) rotate(360deg);
   }
-}
-
-#switch:checked + .icon-moon {
-  animation: rotateAndScaleOut 0.8s ease-in-out forwards;
-}
-
-#switch:checked ~ .icon-sun {
-  animation-delay: 0.3s;
-  animation: rotateAndScaleIn 1s ease-in-out forwards;
-}
-
-#switch:not(:checked) ~ .icon-sun {
-  animation: rotateAndScaleOut 0.8s ease-in-out forwards;
-}
-
-#switch:not(:checked) + .icon-moon {
-  animation-delay: 0.3s;
-  animation: rotateAndScaleIn 1s ease-in-out forwards;
 }
