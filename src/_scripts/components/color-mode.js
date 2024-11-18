@@ -1,39 +1,24 @@
 (function () {
-  const getScheme = () => {
-    const savedMode = localStorage.getItem('selected-color-scheme');
-    const prefersDarkMode = window.matchMedia(
-      '(prefers-color-scheme: dark)'
-    ).matches;
-    return savedMode || (prefersDarkMode ? 'is-dark' : 'is-light');
+  const getDarkMode = () => {
+    const savedMode = localStorage.getItem('selected-dark-mode');
+    if (savedMode !== null) return savedMode === 'true';
+    return window.matchMedia('(prefers-color-scheme: dark)').matches;
   };
 
-  const setScheme = (mode) => {
-    document.documentElement.classList.remove('is-light', 'is-dark');
-    document.documentElement.classList.add(mode);
-    localStorage.setItem('selected-color-scheme', mode);
+  const setDarkMode = (isDarkMode) => {
+    document.documentElement.classList.toggle('is-dark', isDarkMode);
+    document.documentElement.classList.toggle('is-light', !isDarkMode);
+    localStorage.setItem('selected-dark-mode', isDarkMode ? 'true' : 'false');
   };
 
-  const applyColorScheme = () => {
-    const initialMode = getScheme();
-    setScheme(initialMode);
+  const toggleDarkMode = () => setDarkMode(!getDarkMode());
+
+  const initToggleDarkMode = () => {
+    const toggleButton = document.getElementById('footer__dark-mode-btn');
+    toggleButton.addEventListener('click', toggleDarkMode);
   };
 
-  const initSchemeToggle = () => {
-    const toggleButton = document.getElementById('toggle-scheme-btn');
-    if (toggleButton) {
-      toggleButton.addEventListener('click', () => {
-        const currentMode = document.documentElement.classList.contains(
-          'is-dark'
-        )
-          ? 'is-dark'
-          : 'is-light';
-        const newMode = currentMode === 'is-dark' ? 'is-light' : 'is-dark';
-        setScheme(newMode);
-      });
-    }
-  };
+  setDarkMode(getDarkMode());
 
-  applyColorScheme();
-
-  document.addEventListener('DOMContentLoaded', initSchemeToggle);
+  document.addEventListener('DOMContentLoaded', initToggleDarkMode);
 })();
