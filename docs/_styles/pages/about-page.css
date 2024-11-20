@@ -32,17 +32,19 @@
 }
 
 .about-page__team-member-image {
-  display: block;
-  width: 132px;
-  height: 132px;
-  margin-bottom: 8px;
-  border-radius: 50%;
-  filter: grayscale(0.3) sepia(0.08);
+    display: block;
+    width: 120px;
+    height: 120px;
+    margin-bottom: 8px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, .3);
+    filter: grayscale(.2) sepia(0.04);
 }
 
 .is-mobile .about-page__team-member-image {
-  width: 100px;
-  height: 100px;
+    width: 90px;
+    height: 90px;
 }
 
 .about-page__team-member-name {
