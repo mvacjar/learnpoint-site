@@ -3,7 +3,7 @@
    ========================================================================== */
 
 @page {
-  margin: 32px;
+    margin: 32px;
 }
 
 /* ==========================================================================
@@ -11,8 +11,8 @@
    ========================================================================== */
 
 .print * {
-  -webkit-print-color-adjust: exact;
-  print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
 }
 
 /* ==========================================================================
@@ -20,17 +20,17 @@
    ========================================================================== */
 
 .print .print__hide {
-  display: none !important;
+    display: none !important;
 }
 
 .is-light .print__hide {
-  background-color: var(--bg-light);
-  color: #000;
+    background-color: var(--bg-light);
+    color: #000;
 }
 
 .is-dark .print__hide {
-  background-color: var(--bg-dark);
-  color: var(--color-light);
+    background-color: var(--bg-dark);
+    color: var(--color-light);
 }
 
 /* ==========================================================================
@@ -38,5 +38,5 @@
    ========================================================================== */
 
 .print .print__avoid-break-inside {
-  break-inside: avoid-page;
+    break-inside: avoid-page;
 }

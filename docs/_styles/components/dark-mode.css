@@ -1,99 +1,59 @@
-.footer__select-dark-mode {
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
-  box-sizing: border-box;
-  border-radius: 50%;
-  width: 2rem;
-  height: 2rem;
-  margin-left: -0.4rem;
-  display: block;
+.footer__dark-mode-icon {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    box-sizing: border-box;
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    margin-left: -0.4rem;
+    display: block;
 }
 
-.footer__select-dark-mode:hover {
-  background-color: #f1efea;
-  transition: transform 0.1s;
+.footer__dark-mode-icon:hover {
+    background-color: #f1efea;
+    transition: transform 0.1s;
 }
 
-.is-dark .footer__select-dark-mode:hover {
-  background-color: #393939;
+.is-dark .footer__dark-mode-icon:hover {
+    background-color: #393939;
 }
 
-.footer__select-dark-mode:active {
-  transform: scale(0.9);
+.footer__dark-mode-icon:active {
+    transform: scale(0.9);    
 }
 
-.icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.dark-icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.icon svg {
-  height: 21px;
-  width: 21px;
-}
-
-/* =========================================================================
-   Moon
-   ========================================================================= */
-
-.icon-moon svg {
-  fill: #e0e0e0;
-}
-
-.is-light .icon-moon {
-  display: none;
+.dark-icons svg {
+    height: 21px;
+    width: 21px;
 }
 
 /* =========================================================================
-   Sun
-   ========================================================================= */
+    Moon
+    ========================================================================= */
 
-.icon-sun svg {
-  fill: #000000;
+.dark-icons.MOON svg {
+    fill: #e0e0e0;
 }
 
-.is-dark .icon-sun {
-  display: none;
+.is-light .dark-icons.MOON {
+    display: none;
 }
 
 /* =========================================================================
-  Animation
-   ========================================================================= */
+    Sun
+    ========================================================================= */
 
-/* .is-dark .icon-moon svg {
-  display: block;
-  transform: scale(1);
-  animation: rotateAndScaleInMoon 0.4s ease-in-out;
+.dark-icons.SUN svg {
+    fill: #000000;
 }
 
-.is-light .icon-sun svg {
-  display: block;
-  transform: scale(1);
-  animation: rotateAndScaleInSun 0.3s ease-in-out;
+.is-dark .dark-icons.SUN {
+    display: none;
 }
-
-@keyframes rotateAndScaleInMoon {
-  0% {
-    transform: scale(0.9) rotate(100deg);
-  }
-  80% {
-    transform: scale(1.05) rotate(360deg);
-  }
-  100% {
-    transform: scale(1) rotate(360deg);
-  }
-}
-
-@keyframes rotateAndScaleInSun {
-  0% {
-    transform: scale(0.9) rotate(250deg);
-  }
-  80% {
-    transform: scale(1.05) rotate(360deg);
-  }
-  100% {
-    transform: scale(1) rotate(360deg);
-  }
-} */

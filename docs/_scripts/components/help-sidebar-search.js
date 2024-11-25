@@ -113,8 +113,8 @@
 
 
     /* =====================================================================
-       Open / Close the Search Results Panel
-       ===================================================================== */
+    Open / Close the Search Results Panel
+    ===================================================================== */
 
     function openSearchResults() {
         const searchResults = document.querySelector(Selector.SEARCH_RESULTS);

@@ -3,10 +3,10 @@
    ========================================================================= */
 
 .sign-in__paragraph {
-  text-align: center;
-  max-width: 520px;
-  margin: 16px auto;
-  line-height: 1.3;
+    text-align: center;
+    max-width: 520px;
+    margin: 16px auto;
+    line-height: 1.3;
 }
 
 /* =========================================================================
@@ -14,11 +14,11 @@
    ========================================================================= */
 
 .sign-in__label {
-  display: block;
-  text-align: center;
-  max-width: 520px;
-  margin: 32px auto 16px;
-  line-height: 1.3;
+    display: block;
+    text-align: center;
+    max-width: 520px;
+    margin: 32px auto 16px;
+    line-height: 1.3;
 }
 
 /* =========================================================================
@@ -26,8 +26,8 @@
    ========================================================================= */
 
 .sign-in__monospaced {
-  font-weight: bold;
-  padding: 0 1px;
+    font-weight: bold;
+    padding: 0 1px;
 }
 
 /* =========================================================================
@@ -35,11 +35,11 @@
    ========================================================================= */
 
 .sign-in__link {
-  color: #000;
+    color: #000;
 }
 
 .is-dark .sign-in__link {
-  color: var(--color-light);
+    color: var(--color-light);
 }
 
 /* =========================================================================
@@ -47,9 +47,9 @@
    ========================================================================= */
 
 .sign-in__form {
-  max-width: 400px;
-  margin: 16px auto 42px;
-  margin: 16px auto 16px;
+    max-width: 400px;
+    margin: 16px auto 42px;
+    margin: 16px auto 16px;
 }
 
 /* =========================================================================
@@ -57,8 +57,8 @@
    ========================================================================= */
 
 .sign-in__input-wrap {
-  position: relative;
-  margin-bottom: 12px;
+    position: relative;
+    margin-bottom: 12px;
 }
 
 /* =========================================================================
@@ -66,26 +66,26 @@
    ========================================================================= */
 
 .sign-in__input-overlay {
-  font-size: 16px;
-  line-height: 1.6;
-  white-space: pre;
-  position: absolute;
-  pointer-events: none;
-  padding: 12px;
-  margin: 0;
-  box-sizing: border-box;
-  border: 1px solid transparent;
-  left: 0;
-  top: 0;
-  width: 100%;
-  color: transparent;
-  overflow: hidden;
+    font-size: 16px;
+    line-height: 1.6;
+    white-space: pre;
+    position: absolute;
+    pointer-events: none;
+    padding: 12px;
+    margin: 0;
+    box-sizing: border-box;
+    border: 1px solid transparent;
+    left: 0;
+    top: 0;
+    width: 100%;
+    color: transparent;
+    overflow: hidden;
 }
 
 .sign-in__input-overlay:after {
-  content: '.learnpoint.se';
-  font-weight: 600;
-  color: #000;
+    content: '.learnpoint.se';
+    font-weight: 600;
+    color: #000;
 }
 
 /* =========================================================================
@@ -93,43 +93,43 @@
    ========================================================================= */
 
 .sign-in__input {
-  font-family: inherit;
-  font-size: 16px;
-  line-height: 1.6; /* 1.6 is needed for Safari to align text correctly. */
-  display: block;
-  width: 100%;
-  box-sizing: border-box;
-  background-color: #fff;
-  border: 1px solid #aaa;
-  border-radius: 5px;
-  padding: 12px;
-  margin: 0;
-  transition: all 0.1s;
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
+    font-family: inherit;
+    font-size: 16px;
+    line-height: 1.6; /* 1.6 is needed for Safari to align text correctly. */
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #fff;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    padding: 12px;
+    margin: 0;
+    transition: all 0.1s;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
 }
 
 .sign-in__input::placeholder {
-  color: #777;
+    color: #777;
 }
 
 .sign-in__input:focus {
-  border-color: #0780ff;
-  outline: 0;
-  box-shadow: 0 0 3px rgba(7, 128, 255, 0.6);
+    border-color: #0780ff;
+    outline: 0;
+    box-shadow: 0 0 3px rgba(7, 128, 255, 0.6);
 }
 
 .is-dark .sign-in__input:focus {
-  border-color: var(--bg-blue);
+    border-color: var(--bg-blue);
 }
 
 .sign-in__form.ERROR .sign-in__input {
-  border: 1px solid #e00;
+    border: 1px solid #e00;
 }
 
 .sign-in__form.ERROR .sign-in__input:focus {
-  box-shadow: 0 0 5px rgba(224, 0, 0, 0.9);
+    box-shadow: 0 0 5px rgba(224, 0, 0, 0.9);
 }
 
 /* =========================================================================
@@ -137,8 +137,8 @@
    ========================================================================= */
 
 .sign-in__error {
-  position: relative;
-  padding: 13px 0;
+    position: relative;
+    padding: 13px 0;
 }
 
 /* =========================================================================
@@ -148,25 +148,25 @@
 .sign-in__error-message,
 .sign-in__empty-error-message,
 .sign-in__form.ERROR.EMPTY .sign-in__error-message {
-  position: absolute;
-  top: 0;
-  font-size: 14px;
-  font-weight: 600;
-  color: red;
-  padding: 2px 4px;
-  margin-bottom: 4px;
-  opacity: 0;
-  transition: all 0.3s;
+    position: absolute;
+    top: 0;
+    font-size: 14px;
+    font-weight: 600;
+    color: red;
+    padding: 2px 4px;
+    margin-bottom: 4px;
+    opacity: 0;
+    transition: all 0.3s;
 }
 
 .sign-in__form.ERROR .sign-in__error-message {
-  transition: all 0.1s;
-  opacity: 1;
+    transition: all 0.1s;
+    opacity: 1;
 }
 
 .sign-in__form.ERROR.EMPTY .sign-in__empty-error-message {
-  transition: all 0.1s;
-  opacity: 1;
+    transition: all 0.1s;
+    opacity: 1;
 }
 
 /* =========================================================================
@@ -174,36 +174,36 @@
    ========================================================================= */
 
 .sign-in__submit {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  color: #fff;
-  font-weight: 600;
-  padding: 16px;
-  background-color: #0780ff;
-  border: 0;
-  border-radius: 5px;
-  font-family: inherit;
-  font-size: 16px;
-  line-height: 16px;
-  outline: 0;
-  margin: 0;
-  text-align: center;
-  transition: opacity 0.2s;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
-  appearance: none;
-  cursor: pointer;
-  pointer-events: unset;
-  opacity: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    color: #fff;
+    font-weight: 600;
+    padding: 16px;
+    background-color: #0780ff;
+    border: 0;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 16px;
+    line-height: 16px;
+    outline: 0;
+    margin: 0;
+    text-align: center;
+    transition: opacity 0.2s;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
+    appearance: none;
+    cursor: pointer;
+    pointer-events: unset;
+    opacity: 1;
 }
 
 .is-dark .sign-in__submit {
-  background-color: var(--bg-blue);
+    background-color: var(--bg-blue);
 }
 
 .sign-in__form.LOADING .sign-in__submit {
-  pointer-events: none;
+    pointer-events: none;
 }
 
 /* =========================================================================
@@ -211,28 +211,28 @@
    ========================================================================= */
 
 .sign-in__submit-spinner {
-  border: 3px solid #fff;
-  border-left-color: transparent;
-  border-radius: 50%;
-  height: 12px;
-  width: 0;
-  margin: 0;
-  opacity: 0;
-  transition: width 0.1s, margin 0.1s, opacity 0.06s;
-  animation: sign-in-submit-spinner 0.8s linear infinite;
+    border: 3px solid #fff;
+    border-left-color: transparent;
+    border-radius: 50%;
+    height: 12px;
+    width: 0;
+    margin: 0;
+    opacity: 0;
+    transition: width 0.1s, margin 0.1s, opacity 0.06s;
+    animation: sign-in-submit-spinner 0.8s linear infinite;
 }
 
 .sign-in__form.SUBMITTING .sign-in__submit-spinner {
-  transition: width 0.1s, margin 0.1s, opacity 0.2s 0.1s;
-  width: 12px;
-  margin: 0 8px 0 0;
-  opacity: 1;
+    transition: width 0.1s, margin 0.1s, opacity 0.2s 0.1s;
+    width: 12px;
+    margin: 0 8px 0 0;
+    opacity: 1;
 }
 
 @keyframes sign-in-submit-spinner {
-  100% {
-    transform: rotate(360deg);
-  }
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 /* =========================================================================
@@ -240,9 +240,9 @@
    ========================================================================= */
 
 .sign-in__help-message {
-  margin: 0 0 64px;
-  font-size: 15px;
-  text-align: center;
+    margin: 0 0 64px;
+    font-size: 15px;
+    text-align: center;
 }
 
 /* =========================================================================
@@ -250,12 +250,12 @@
    ========================================================================= */
 
 .sign-in__previous-logins {
-  max-width: 400px;
-  margin: 16px auto 32px;
+    max-width: 400px;
+    margin: 16px auto 32px;
 }
 
 .sign-in__previous-logins.EMPTY {
-  display: none;
+    display: none;
 }
 
 /* =========================================================================
@@ -263,10 +263,10 @@
    ========================================================================= */
 
 .sign-in__previous-logins p {
-  margin: 0 0 12px;
-  font-size: 17px;
-  font-weight: bold;
-  text-align: center;
+    margin: 0 0 12px;
+    font-size: 17px;
+    font-weight: bold;
+    text-align: center;
 }
 
 /* =========================================================================
@@ -274,8 +274,8 @@
    ========================================================================= */
 
 .sign-in__previous-logins ul {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 /* =========================================================================
@@ -283,18 +283,18 @@
    ========================================================================= */
 
 .sign-in__previous-login-item {
-  margin: 0 0 8px;
-  padding: 0;
-  background-color: #fff;
-  border-radius: 5px;
-  border: 1px solid #bbb;
-  list-style: none;
-  display: flex;
-  gap: 16px;
-  align-items: center;
-  position: relative;
-  overflow: hidden;
-  justify-content: space-between;
+    margin: 0 0 8px;
+    padding: 0;
+    background-color: #fff;
+    border-radius: 5px;
+    border: 1px solid #bbb;
+    list-style: none;
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    justify-content: space-between;
 }
 
 /* =========================================================================
@@ -302,15 +302,15 @@
    ========================================================================= */
 
 .sign-in__previous-logins a {
-  margin: 0;
-  padding: 12px 16px;
-  font-size: 16px;
-  font-weight: 600;
-  text-decoration: none;
-  color: inherit;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+    margin: 0;
+    padding: 12px 16px;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    color: inherit;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 /* =========================================================================
@@ -318,17 +318,17 @@
    ========================================================================= */
 
 .sign-in__previous-login-delete-button {
-  appearance: none;
-  -webkit-appearance: none;
-  border: 0;
-  margin: 0;
-  padding: 12px 16px;
-  background-color: transparent;
-  display: flex;
-  justify-content: center;
-  cursor: pointer;
-  position: relative;
-  z-index: 10;
+    appearance: none;
+    -webkit-appearance: none;
+    border: 0;
+    margin: 0;
+    padding: 12px 16px;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    z-index: 10;
 }
 
 /* =========================================================================
@@ -336,17 +336,17 @@
    ========================================================================= */
 
 .sign-in__previous-login-delete-button img {
-  opacity: 0.4;
-  transition: opacity 0.2s;
+    opacity: 0.4;
+    transition: opacity 0.2s;
 }
 
 .sign-in__previous-login-delete-button:hover img {
-  opacity: 1;
+    opacity: 1;
 }
 
 .sign-in__previous-login-item.POPOVER-OPEN
-  .sign-in__previous-login-delete-button {
-  display: none;
+    .sign-in__previous-login-delete-button {
+    display: none;
 }
 
 /* =========================================================================
@@ -354,22 +354,22 @@
    ========================================================================= */
 
 .sign-in__previous-login-delete-confirm-popover {
-  position: absolute;
-  opacity: 0;
-  pointer-events: none;
-  visibility: hidden;
-  align-items: center;
-  right: 9px;
-  background-color: #fff;
-  display: flex;
-  transition: all 0.2s;
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+    align-items: center;
+    right: 9px;
+    background-color: #fff;
+    display: flex;
+    transition: all 0.2s;
 }
 
 .sign-in__previous-login-item.POPOVER-OPEN
-  .sign-in__previous-login-delete-confirm-popover {
-  pointer-events: auto;
-  visibility: visible;
-  opacity: 1;
+    .sign-in__previous-login-delete-confirm-popover {
+    pointer-events: auto;
+    visibility: visible;
+    opacity: 1;
 }
 
 /* =========================================================================
@@ -378,27 +378,27 @@
 
 .sign-in__previous-login-confirm-delete,
 .sign-in__previous-login-cancel-delete {
-  display: block;
-  cursor: pointer;
-  font-weight: 600;
-  padding: 6px 10px;
-  background-color: #fff;
-  color: #000;
-  border: 0;
-  border-radius: 5px;
-  font-family: inherit;
-  font-size: 12px;
-  line-height: 12px;
-  outline: 0;
-  text-align: center;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
-  appearance: none;
-  border: 1px solid #aaa;
+    display: block;
+    cursor: pointer;
+    font-weight: 600;
+    padding: 6px 10px;
+    background-color: #fff;
+    color: #000;
+    border: 0;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 12px;
+    line-height: 12px;
+    outline: 0;
+    text-align: center;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
+    appearance: none;
+    border: 1px solid #aaa;
 }
 
 .sign-in__previous-login-confirm-delete {
-  color: #fff;
-  background-color: #ed4337;
-  border-color: transparent;
-  margin-right: 7px;
+    color: #fff;
+    background-color: #ed4337;
+    border-color: transparent;
+    margin-right: 7px;
 }

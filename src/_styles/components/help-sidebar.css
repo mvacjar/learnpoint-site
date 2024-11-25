@@ -263,25 +263,25 @@
 }
 
 .is-dark.is-desktop .help-sidebar nav a:hover {
-  color: var(--color-light);
-  background-color: var(--color-grey);
+    color: var(--color-light);
+    background-color: var(--color-grey);
 }
 
 .help-sidebar nav a.SELECTED {
-  color: #000;
-  font-weight: 600;
-  border-color: #0780ff;
-  background-color: rgba(255, 255, 255, 0.9);
+    color: #000;
+    font-weight: 600;
+    border-color: #0780ff;
+    background-color: rgba(255, 255, 255, 0.9);
 }
 
 .is-mobile .help-sidebar nav a.SELECTED {
-  color: #fff;
-  border-color: transparent;
-  border-radius: 4px;
-  background-color: rgba(255, 255, 2666, 0.2);
+    color: #fff;
+    border-color: transparent;
+    border-radius: 4px;
+    background-color: rgba(255, 255, 2666, 0.2);
 }
 
 .is-dark .help-sidebar nav a.SELECTED {
-  background-color: var(--bg-dark);
-  color: var(--color-light);
+    background-color: var(--bg-dark);
+    color: var(--color-light);
 }
